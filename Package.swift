@@ -24,7 +24,7 @@ let package = Package(
     ],
     dependencies: [
         // Pin to the first released version of the SDK
-        .package(url: "https://github.com/ReachuDevteam/ReachuSwiftSDK.git", exact: "3.1.0")
+        .package(url: "https://github.com/ReachuDevteam/ReachuSwiftSDK.git", exact: "3.2.0")
     ],
     targets: [
         .target(
