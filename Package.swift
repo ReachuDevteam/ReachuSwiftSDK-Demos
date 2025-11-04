@@ -7,7 +7,7 @@ let package = Package(
         .macOS(.v12),
         .iOS(.v15),
         .tvOS(.v15),
-        .watchOS(.v8)
+        .watchOS(.v8),
     ],
     products: [
         .library(name: "ReachuDemoKit", targets: ["ReachuDemoKit"]),
@@ -20,11 +20,11 @@ let package = Package(
         .executable(name: "DiscountDemo", targets: ["DiscountDemo"]),
         .executable(name: "MarketDemo", targets: ["MarketDemo"]),
         .executable(name: "PaymentDemo", targets: ["PaymentDemo"]),
-        .executable(name: "Sdk", targets: ["Sdk"])
+        .executable(name: "Sdk", targets: ["Sdk"]),
     ],
     dependencies: [
         // Pin to the first released version of the SDK
-        .package(url: "https://github.com/ReachuDevteam/ReachuSwiftSDK.git", exact: "3.1.0")
+        .package(url: "https://github.com/ReachuDevteam/ReachuSwiftSDK.git", exact: "3.2.1")
     ],
     targets: [
         .target(
@@ -36,7 +36,7 @@ let package = Package(
             name: "CartDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/CartDemo"
         ),
@@ -44,7 +44,7 @@ let package = Package(
             name: "ChannelDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/ChannelDemo",
             exclude: ["CategoryDemo", "InfoDemo", "ProductDemo"]
@@ -53,7 +53,7 @@ let package = Package(
             name: "CategoryDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/ChannelDemo/CategoryDemo"
         ),
@@ -61,7 +61,7 @@ let package = Package(
             name: "InfoDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/ChannelDemo/InfoDemo"
         ),
@@ -69,7 +69,7 @@ let package = Package(
             name: "ProductDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/ChannelDemo/ProductDemo"
         ),
@@ -77,7 +77,7 @@ let package = Package(
             name: "CheckoutDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/CheckoutDemo"
         ),
@@ -85,7 +85,7 @@ let package = Package(
             name: "DiscountDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/DiscountDemo"
         ),
@@ -93,7 +93,7 @@ let package = Package(
             name: "MarketDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/MarketDemo"
         ),
@@ -101,7 +101,7 @@ let package = Package(
             name: "PaymentDemo",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/PaymentDemo"
         ),
@@ -109,9 +109,9 @@ let package = Package(
             name: "Sdk",
             dependencies: [
                 .product(name: "ReachuCore", package: "ReachuSwiftSDK"),
-                "ReachuDemoKit"
+                "ReachuDemoKit",
             ],
             path: "ReachuDemoSdk/Sdk"
-        )
+        ),
     ]
 )
